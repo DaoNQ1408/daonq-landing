@@ -1,19 +1,21 @@
+import Navbar from "./components/Navbar";
 import "./index.css";
+import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Home, Contact, About, Projects } from "./pages";
 
 function App() {
   return (
-    <>
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="flex flex-col items-center">
-          <div>This is DaoNQ</div>
-          <img
-            src="https://res.cloudinary.com/dt3uzyfcg/image/upload/v1762919805/p95jjq3jab4x1ld2w5z1.jpg"
-            alt="DaoNQ"
-            className="object-bottom"
-          />
-        </div>
-      </div>
-    </>
+    <main className="bg-slate-300/20">
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   );
 }
 
