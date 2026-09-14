@@ -1,4 +1,5 @@
 import { CheckCircle } from "@phosphor-icons/react";
+import { useState } from "react";
 import type { Experience } from "@/data/portfolio";
 
 interface ExperienceItemProps {
@@ -8,9 +9,27 @@ interface ExperienceItemProps {
 export default function ExperienceItem({
   experience,
 }: Readonly<ExperienceItemProps>) {
+  const [hasImage, setHasImage] = useState(Boolean(experience.imageUrl));
+
   return (
     <article className="experience-item">
       <div className="experience-item__meta">
+        {experience.imageUrl && hasImage ? (
+          <img
+            className="experience-item__logo"
+            src={experience.imageUrl}
+            alt={`${experience.company} logo`}
+            loading="lazy"
+            onError={() => setHasImage(false)}
+          />
+        ) : (
+          <div
+            className="experience-item__logo experience-item__logo--fallback"
+            aria-hidden="true"
+          >
+            {experience.company.slice(0, 1)}
+          </div>
+        )}
         <span>{experience.period}</span>
         <span>{experience.location}</span>
       </div>

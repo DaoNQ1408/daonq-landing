@@ -447,6 +447,21 @@ a {
   color: var(--muted);
   font-size: 10px;
 }
+.experience-item__logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  padding: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.experience-item__logo--fallback {
+  display: grid;
+  place-items: center;
+  color: var(--teal);
+  font-family: var(--serif);
+  font-size: 24px;
+}
 .experience-item__company {
   color: var(--teal) !important;
 }
@@ -539,7 +554,7 @@ a {
   padding: 25px 0;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 10px;
+  font-size: 14px;
 }
 .site-footer div {
   display: flex;
@@ -681,6 +696,7 @@ a {
   }
   .site-footer {
     flex-wrap: wrap;
+    font-size: 10px;
   }
   .site-footer span:nth-child(2) {
     order: 3;

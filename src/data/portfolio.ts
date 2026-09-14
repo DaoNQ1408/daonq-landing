@@ -12,6 +12,7 @@ export interface Project {
 
 export interface Experience {
   company: string;
+  imageUrl?: string;
   role: string;
   period: string;
   location: string;
@@ -51,6 +52,8 @@ export const skills = [
 export const experiences: Experience[] = [
   {
     company: "Picare Vietnam Company",
+    imageUrl:
+      "https://res.cloudinary.com/dt3uzyfcg/image/upload/v1789404432/picare_n4zgjm.jpg",
     role: "Software Engineer Intern",
     period: "May — Aug 2025",
     location: "Ho Chi Minh City",
