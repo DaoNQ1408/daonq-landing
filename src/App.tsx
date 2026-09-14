@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar";
 import "./index.css";
+import "./App.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { Home, Contact, About, Projects } from "./pages";
 
 function App() {
   return (
-    <main className="bg-slate-300/20">
+    <main className="site-shell">
       <BrowserRouter>
         <Navbar />
         <Routes>
