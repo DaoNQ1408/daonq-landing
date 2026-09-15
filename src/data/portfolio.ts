@@ -32,9 +32,9 @@ export interface Certification {
 export const profile = {
   name: "Nguyen Quang Dao",
   role: "Backend Engineer",
-  eyebrow: "Software engineer / architecture enthusiast",
+  eyebrow: "Freshly Graduated Software Engineer",
   summary:
-    "I design dependable backend systems and the interfaces around them. My work spans modular Spring Boot platforms, data-heavy products, and practical tools that turn complex workflows into clear experiences.",
+    "I design backend systems. My work spans modular Spring Boot platforms.",
   location: "Ho Chi Minh City, Vietnam",
   email: "nguyenquangdao1408@gmail.com",
   phone: "077-692-5520",
@@ -57,8 +57,7 @@ export const experiences: Experience[] = [
     role: "Software Engineer Intern",
     period: "May — Aug 2025",
     location: "Ho Chi Minh City",
-    summary:
-      "Built internal tools for document-heavy operations and warehouse workflows.",
+    summary: "Built internal tools for internal documents approval workflows.",
     highlights: [
       "Developed a multi-tier form approval system with Spring Security, JWT, OTP verification, and Google Drive storage.",
       "Engineered a PDF signature utility that embeds authorized signatures at precise document coordinates.",
